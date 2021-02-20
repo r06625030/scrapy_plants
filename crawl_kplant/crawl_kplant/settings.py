@@ -62,6 +62,7 @@ ROBOTSTXT_OBEY = False
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
+    'crawl_kplant.pipelines.NoneElementPipeline': 290,
     'crawl_kplant.pipelines.CrawlKplantPipeline': 300,
     'crawl_kplant.pipelines.DuplicatesTitlePipeline': 310,
 }

@@ -10,32 +10,35 @@ import re
 from scrapy.exceptions import DropItem
 
 
-def cleaner(text):
-    if text is None:
-        return text
-    clean = re.compile('<[^>]*>')
-    text = clean.sub('', text).replace(' ', '').replace('\n', '').replace('\r', '')
-    return text
+class NoneElementPipeline:
+    def process_item(self, item, spider):
+        for element in item:
+            if item[element] is None:
+                item[element] = ''
+        return item
 
 
 class CrawlKplantPipeline:
+    def cleaner(self, text):
+        clean = re.compile('<[^>]*>')
+        text = clean.sub('', text).replace(' ', '').replace('\n', '').replace('\r', '')
+        return text
+
     def process_item(self, item, spider):
-        item['cName'] = cleaner(item['cName'])
+        item['cName'] = self.cleaner(item['cName'])
         # 去除第1行有時會出現的「更多ＸＸＸ」
         item['cName'] = re.sub('\u00a0+.*', '', item['cName'])
-        if item['eName'] is not None:
-            item['eName'] = re.sub('<[^>]*>', '', item['eName']).replace('\n', '').replace('\r', '')
-            item['eName'] = re.sub(' +', ' ', item['eName'])
-        if item['sName'] is not None:
-            item['sName'] = re.sub('<[^>]*>', '', item['sName']).replace('\n', '').replace('\r', '')
-            item['sName'] = re.sub(' +', ' ', item['sName'])
-        item['fName'] = cleaner(item['fName'])
-        item['aName'] = cleaner(item['aName'])
-        item['distribution'] = cleaner(item['distribution'])
-        item['stem'] = cleaner(item['stem'])
-        item['leaf'] = cleaner(item['leaf'])
-        item['flower'] = cleaner(item['flower'])
-        item['fruit'] = cleaner(item['fruit'])
+        item['eName'] = re.sub('<[^>]*>', '', item['eName']).replace('\n', '').replace('\r', '')
+        item['eName'] = re.sub(' +', ' ', item['eName'])
+        item['sName'] = re.sub('<[^>]*>', '', item['sName']).replace('\n', '').replace('\r', '')
+        item['sName'] = re.sub(' +', ' ', item['sName'])
+        item['fName'] = self.cleaner(item['fName'])
+        item['aName'] = self.cleaner(item['aName'])
+        item['distribution'] = self.cleaner(item['distribution'])
+        item['stem'] = self.cleaner(item['stem'])
+        item['leaf'] = self.cleaner(item['leaf'])
+        item['flower'] = self.cleaner(item['flower'])
+        item['fruit'] = self.cleaner(item['fruit'])
         return item
 
 
