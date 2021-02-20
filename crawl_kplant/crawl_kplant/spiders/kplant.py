@@ -22,15 +22,17 @@ class KplantSpider(scrapy.Spider):
         with open('testUrl.json', newline='') as jsonfile:
             links = json.load(jsonfile)
             for link in links:
-                yield scrapy.Request(link['link'], callback=self.family_parse)
+                yield scrapy.Request(link['link'], meta={'family': link['title']}, callback=self.family_parse)
 
     def family_parse(self, response):
+        family = response.meta['family']
         # 取得物種名
         plant_links = LinkExtractor(restrict_css='td').extract_links(response)
         for plant_link in plant_links:
             plant = CrawlKplantItem()
             # 取得url後賦值給plant['url']再傳遞到plant_parse取得其他屬性
             plant['url'] = plant_link.url
+            plant['fName'] = family
             yield scrapy.Request(plant_link.url, meta={'key': plant}, callback=self.plant_parse)
 
     def plant_parse(self, response):
@@ -46,9 +48,8 @@ class KplantSpider(scrapy.Spider):
                 for row in range(rows - 1):
                     plant['sName'] = plant['sName'] + ' ' + response.xpath(
                         '//table[2]//tr[{}]/td'.format(4 + row)).extract_first()
-        plant['fName'] = response.xpath('//tr/td[1][contains(.,"‧科")]/following-sibling::td[1]').extract_first()
+        plant['gName'] = response.xpath('//tr/td[1][contains(.,"‧科")]/following-sibling::td[1]').extract_first()
         plant['aName'] = response.xpath('//tr/td[1][contains(.,"‧別")]/following-sibling::td[1]').extract_first()
-        plant['distribution'] = response.xpath('//tr/td[1][contains(.,"‧分")]/following-sibling::td[1]').extract_first()
         plant['stem'] = response.xpath(
             '//tr/td[1][contains(.,"‧莖") or contains(.,"‧配子體")]/following-sibling::td[1]').extract_first()
         plant['leaf'] = response.xpath('//tr/td[1][contains(.,"‧葉")]/following-sibling::td[1]').extract_first()
