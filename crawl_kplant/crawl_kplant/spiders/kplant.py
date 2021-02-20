@@ -19,7 +19,7 @@ class KplantSpider(scrapy.Spider):
         for link in links:
             if '科' in link.text:
                 yield scrapy.Request(link.url, callback=self.plant_parse)'''
-        with open('familyUrl.json', newline='') as jsonfile:
+        with open('testUrl.json', newline='') as jsonfile:
             links = json.load(jsonfile)
             for link in links:
                 yield scrapy.Request(link['link'], callback=self.family_parse)

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3364376-40f8-4095-968a-f9610833256a" name="Default Changelist" comment="" />
+    <list default="true" id="f3364376-40f8-4095-968a-f9610833256a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/crawl_kplant/crawl_kplant/spiders/kplant.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawl_kplant/crawl_kplant/spiders/kplant.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crawl_kplant/crawl_kplant/spiders/kplant.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="39" column="40" lean-forward="true" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+            <state relative-caret-position="209">
+              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
               <folding>
                 <element signature="e#25#38#0" expanded="true" />
               </folding>
@@ -116,6 +118,9 @@
       <find>石月</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -135,6 +140,7 @@
     <option name="width" value="1910" />
     <option name="height" value="1045" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -204,15 +210,16 @@
       <updated>1613618987471</updated>
       <workItem from="1613618992816" duration="17460000" />
       <workItem from="1613707566941" duration="19861000" />
-      <workItem from="1613792150635" duration="12010000" />
+      <workItem from="1613792150635" duration="12562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49331000" />
+    <option name="totallyTimeSpent" value="49883000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1045" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25672767" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -228,7 +235,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3298731" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3310185" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -337,8 +344,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crawl_kplant/crawl_kplant/spiders/kplant.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="39" column="40" lean-forward="true" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+        <state relative-caret-position="209">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
           <folding>
             <element signature="e#25#38#0" expanded="true" />
           </folding>
