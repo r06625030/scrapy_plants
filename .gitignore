@@ -1,2 +1,3 @@
 venv/
 crawl_kplant/*.csv
+crawl_kplant/*.log
