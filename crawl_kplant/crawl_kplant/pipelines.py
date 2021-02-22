@@ -8,6 +8,7 @@
 from itemadapter import ItemAdapter
 import re
 from scrapy.exceptions import DropItem
+import sqlite3
 
 
 class NoneElementPipeline:
@@ -51,3 +52,42 @@ class DuplicatesTitlePipeline(object):
             raise DropItem('duplicates title found %s', item)
         self.article.add(title)
         return (item)
+
+
+class SQLitePipeline(object):
+    # 打開database
+    def open_spider(self, spider):
+        db_name = spider.settings.get('SQLITE_DB_NAME')
+        self.db_conn = sqlite3.connect(db_name)
+        self.db_cur = self.db_conn.cursor()
+
+    # 關閉database
+    def close_spider(self, spider):
+        self.db_conn.commit()
+        self.db_conn.close()
+
+    def insert_db(self, item):
+        self.db_cur.execute('SELECT cName FROM plants WHERE cName = (?)', (item['cName'],))
+        result = self.db_cur.fetchone()
+        if result:
+            raise DropItem('Item already in database: %s' % item)
+        else:
+            values = (
+                item['url'],
+                item['fName'],
+                item['cName'],
+                item['eName'],
+                item['sName'],
+                item['gName'],
+                item['aName'],
+                item['stem'],
+                item['leaf'],
+                item['flower'],
+                item['fruit'],
+            )
+            sql = 'INSERT INTO plants VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+            self.db_cur.execute(sql, values)
+
+    def process_item(self, item, spider):
+        self.insert_db(item)
+        return item

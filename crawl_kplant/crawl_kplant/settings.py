@@ -12,6 +12,8 @@ BOT_NAME = 'crawl_kplant'
 SPIDER_MODULES = ['crawl_kplant.spiders']
 NEWSPIDER_MODULE = 'crawl_kplant.spiders'
 
+SQLITE_DB_NAME = 'plants.db'
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.151 Safari/537.36'
 
@@ -65,6 +67,7 @@ ITEM_PIPELINES = {
     'crawl_kplant.pipelines.NoneElementPipeline': 290,
     'crawl_kplant.pipelines.CrawlKplantPipeline': 300,
     'crawl_kplant.pipelines.DuplicatesTitlePipeline': 310,
+    'crawl_kplant.pipelines.SQLitePipeline': 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
