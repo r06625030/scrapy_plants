@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3364376-40f8-4095-968a-f9610833256a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/kplant.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kplant.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crawl_kplant/plants.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crawl_kplant/crawl_kplant/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawl_kplant/crawl_kplant/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawl_kplant/crawl_kplant/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawl_kplant/crawl_kplant/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawl_kplant/crawl_kplant/spiders/kplant.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawl_kplant/crawl_kplant/spiders/kplant.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crawl_kplant/crawl_kplant/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1611">
-              <caret line="64" column="35" lean-forward="true" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
+            <state relative-caret-position="389">
+              <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
               <folding>
                 <element signature="e#238#273#0" expanded="true" />
               </folding>
@@ -73,9 +71,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-104">
+              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawl_kplant/crawl_kplant/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
+            <state relative-caret-position="26">
               <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
             </state>
           </provider>
@@ -115,8 +122,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/crawl_kplant/crawl_kplant/items.py" />
         <option value="$PROJECT_DIR$/crawl_kplant/crawl_kplant/settings.py" />
-        <option value="$PROJECT_DIR$/crawl_kplant/crawl_kplant/pipelines.py" />
         <option value="$PROJECT_DIR$/crawl_kplant/crawl_kplant/spiders/kplant.py" />
+        <option value="$PROJECT_DIR$/crawl_kplant/crawl_kplant/pipelines.py" />
       </list>
     </option>
   </component>
@@ -165,11 +172,11 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/crawl_kplant" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -204,7 +211,7 @@
       <workItem from="1613895859483" duration="10000" />
       <workItem from="1613897476136" duration="1262000" />
       <workItem from="1613982629640" duration="7050000" />
-      <workItem from="1613990195432" duration="681000" />
+      <workItem from="1613990195432" duration="2798000" />
     </task>
     <task id="LOCAL-00001" summary="NoneElementPipeline">
       <created>1613813795514</created>
@@ -227,11 +234,18 @@
       <option name="project" value="LOCAL" />
       <updated>1613895757785</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="store data in SQLite">
+      <created>1613990876432</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613990876432</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69699000" />
+    <option name="totallyTimeSpent" value="71816000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1045" extended-state="6" />
@@ -289,13 +303,6 @@
     <entry file="file://$PROJECT_DIR$/crawl_kplant/kplant.csv" />
     <entry file="file://$PROJECT_DIR$/crawl_kplant/familyUrl2.csv" />
     <entry file="file://$PROJECT_DIR$/crawl_kplant/test.json" />
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawl_kplant/test3.csv" />
     <entry file="file://$PROJECT_DIR$/crawl_kplant/test.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
@@ -341,20 +348,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawl_kplant/crawl_kplant/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawl_kplant/crawl_kplant/items.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
@@ -372,10 +365,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-104">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawl_kplant/crawl_kplant/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/crawl_kplant/crawl_kplant/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1611">
-          <caret line="64" column="35" lean-forward="true" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
+        <state relative-caret-position="389">
+          <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
           <folding>
             <element signature="e#238#273#0" expanded="true" />
           </folding>
